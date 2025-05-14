@@ -85,10 +85,18 @@ export default function LandingPage() {
                 transition={{ duration: 0.5, ease: "easeOut" }}
               >
                 <img 
-                  src="/main-logo.png" 
-                  alt="Compass HRG" 
-                  className="h-24 mx-auto"
+                  src="/stokke.gif" 
+                  alt="Stokke" 
+                  className="h-80 w-80 mx-auto rounded-full object-cover object-[center_10%]"
                 />
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="mt-4 text-gray-700 text-lg font-medium"
+                >
+                  Annika our AI assistant is ready to help you..
+                </motion.p>
               </motion.div>
             </CardTitle>
           </CardHeader>

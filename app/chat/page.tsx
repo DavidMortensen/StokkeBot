@@ -103,7 +103,7 @@ export default function ChatPage() {
           await new Promise(resolve => setTimeout(resolve, 2000));
           // Use append to properly handle the message stream
           await append({
-            content: "Hi, introduce yourself as the Compass Assistant.",
+            content: "Hi, introduce yourself as Annika, an AI powered assistant.",
             role: 'user',
           });
           hasInitialMessageRef.current = true;
@@ -170,7 +170,7 @@ export default function ChatPage() {
   const displayMessages = messages.filter((message) => {
     if (message.role === 'user') {
       // Hide the initial prompt message
-      if (message.content === "Hi, introduce yourself as the Compass Assistant.") {
+      if (message.content === "Hi, introduce yourself as Annika, an AI powered assistant.") {
         return false;
       }
       return true;
@@ -204,13 +204,21 @@ export default function ChatPage() {
         {/* Top Bar */}
         <div className="bg-white dark:bg-slate-800 rounded-t-xl p-4 border-b border-slate-200 dark:border-slate-700">
           <div>
-            <h1 className="font-semibold text-lg">Compass Assistant</h1>
-            <p className="text-sm text-muted-foreground">Powered by OpenAI</p>
+            <h1 className="font-semibold text-lg">Annika</h1>
+            <p className="text-sm text-muted-foreground">Annika our AI assistant is ready to help you..</p>
           </div>
         </div>
 
         {/* Chat Container */}
-        <div className="bg-white dark:bg-slate-800 h-[600px] flex flex-col rounded-b-xl">
+        <div className="bg-white dark:bg-slate-800 h-[600px] flex flex-col rounded-b-xl relative">
+          {/* Overlay Image */}
+          <div className="absolute -top-24 -right-8 w-32 h-32 z-10">
+            <img 
+              src="/stokke2.gif" 
+              alt="Stokke" 
+              className="w-full h-full object-cover rounded-2xl shadow-lg"
+            />
+          </div>
           {/* Messages Area */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth">
             <div className="flex flex-col">
