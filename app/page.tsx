@@ -69,7 +69,7 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="landing-container min-h-screen bg-gradient-to-br from-indigo-50 to-blue-100 flex items-center justify-center">
+    <div className="landing-container min-h-screen bg-[#f5f5f5] flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -130,7 +130,7 @@ export default function LandingPage() {
                   className={`w-full py-2 relative ${
                     isLoading
                       ? 'bg-gray-400'
-                      : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700'
+                      : 'bg-[#f8742c] hover:bg-[#e66a28]'
                   } transition-all duration-300 text-white shadow-md rounded-lg overflow-hidden`}
                 >
                   <motion.div

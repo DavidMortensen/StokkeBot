@@ -193,7 +193,7 @@ export default function ChatPage() {
       initial={{ opacity: 0 }} 
       animate={{ opacity: 1 }} 
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="min-h-screen bg-slate-100 dark:bg-slate-900 py-24 px-4"
+      className="min-h-screen bg-[#f5f5f5] dark:bg-slate-900 py-24 px-4"
     >
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -229,7 +229,7 @@ export default function ChatPage() {
                       className="flex mb-4 justify-end"
                     >
                       <div className="flex gap-3 max-w-[85%] flex-row-reverse items-end">
-                        <div className="rounded-2xl px-4 py-2 shadow-sm bg-indigo-600 text-white">
+                        <div className="rounded-2xl px-4 py-2 shadow-sm bg-[#f8742c] text-white">
                           <div className="text-sm text-white">
                             <ReactMarkdown
                               remarkPlugins={[remarkGfm]}
@@ -322,7 +322,7 @@ export default function ChatPage() {
               <Button 
                 type="submit" 
                 disabled={isLoading || !input.trim()}
-                className="min-h-[56px] px-8 bg-indigo-600 hover:bg-indigo-700 text-white disabled:opacity-50 flex items-center justify-center"
+                className="min-h-[56px] px-8 bg-[#f8742c] hover:bg-[#e66a28] text-white disabled:opacity-50 flex items-center justify-center"
               >
                 {isLoading ? (
                   <span className="flex gap-1">
